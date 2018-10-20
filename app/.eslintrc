@@ -1,0 +1,13 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": ["prettier", "react"],
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "env": {
+        "browser": true,
+        "jest": true,
+        "es6": true
+    }
+}
