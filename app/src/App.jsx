@@ -1,10 +1,10 @@
 import React from 'react';
+import HomePage from './pages/HomePage.jsx';
 
 const App = () => {
   return (
     <div>
-      <p>{'React here!'}</p>
-      <h1>{'TESTING HMR'}</h1>
+      <HomePage />
     </div>
   );
 };

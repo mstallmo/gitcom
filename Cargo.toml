@@ -1,0 +1,12 @@
+[package]
+name = "gitcom"
+version = "0.1.0"
+authors = ["Mason Stallmo <masonstallmo@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.3"
+rocket_codegen = "0.3"
+diesel = { version = "1", features=["postgres", "r2d2"]}
+dotenv = "0.9"
+rocket_igniter = { git = "https://github.com/mstallmo/rocket_igniter.git"}

@@ -9,6 +9,6 @@ describe('Root App', () => {
   });
 
   it('it should render the app', () => {
-    expect(component.find('h1').length).toEqual(1);
+    expect(component.find('HomePage').length).toEqual(1);
   });
 });

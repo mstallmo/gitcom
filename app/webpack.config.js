@@ -4,7 +4,8 @@ const path = require("path");
 module.exports = {
   entry: path.resolve(__dirname, 'src/app.js'),
   output: {
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'static/js/[name].js'
   },
   module: {
     rules: [{
@@ -26,7 +27,13 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 3000
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        secure: false
+      }
+    }
   },
   plugins: [
     new HtmlWebPackPlugin({
