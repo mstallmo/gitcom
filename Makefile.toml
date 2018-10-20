@@ -1,0 +1,3 @@
+[tasks.frontend]
+command = "npm"
+args = ["--prefix", "./app", "run", "build"]
