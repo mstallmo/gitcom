@@ -1,13 +1,27 @@
-[tasks.frontend]
+[tasks.frontend-build]
 command = "npm"
 args = ["--prefix", "./app", "run", "build"]
 
-[tasks.backend]
+[tasks.backend-build]
 command = "cargo"
 args = ["build", "--release"]
 
-[tasks.build-app]
+[tasks.frontend-test]
+command = "npm"
+args = ["--prefix", "./app", "test"]
+
+[tasks.backend-test]
+command = "cargo"
+args = ["test"]
+
+[tasks.build]
 dependencies = [
-    "frontend",
-    "backend"
+    "frontend-build",
+    "backend-build"
+]
+
+[tasks.test]
+dependencies = [
+    "frontend-test",
+    "backend-test"
 ]
